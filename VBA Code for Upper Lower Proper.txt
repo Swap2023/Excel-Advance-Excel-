@@ -1,0 +1,26 @@
+Sub upper()
+For Each cell In Selection
+If Not cell.HasFormula Then
+cell.Value = UCase(cell.Value)
+End If
+Next cell
+End Sub
+
+
+Sub proper()
+For Each cell In Selection
+If Not cell.HasFormula Then
+cell.Value = Application.WorksheetFunction.proper(cell.Value)
+End If
+Next cell
+End Sub
+
+
+
+Sub lower()
+For Each cell In Selection
+If Not cell.HasFormula Then
+cell.Value = LCase(cell.Value)
+End If
+Next cell
+End Sub
